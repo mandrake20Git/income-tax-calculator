@@ -19,7 +19,7 @@ body, .banner {
   position: relative;
   height: 100vh;
   width: 100%;
-  background-color: rgb(252, 252, 252);
+  background-color: dark grey;
 }
 
 .info {

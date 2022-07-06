@@ -32,24 +32,7 @@
         let monthly = true;
         let isNewRates //= true;
 
-        //console.log(salary);
-        //console.log(benefits);
-
-
-        /**
-         * income before pension deduction
-         * deductible NSSF pension
-         * income after pension deduction
-         * benefits of kind
-         * taxable income
-         * tax on taxable income
-         * personal relief
-         * tax net off relief
-         * PAYE
-         * chargeable income
-         * NHIF contribution
-         * Net Pay
-         */
+        
 
         //handle input change
         document.querySelectorAll("input[type=text]").forEach((input, i) => {
@@ -173,7 +156,7 @@
             let nssfAmount = 0;
 
             if (isNewRates) {//new rates
-                if (salary > 18000) { //when pensionable salary > 18000 deuct flat rate = 2160
+                if (salary > 18000) { 
                     nssfAmount += 2160;
                 } else {
                     nssfAmount += salary * 0.12;
@@ -229,16 +212,14 @@
                 }
 
             } else {
-                //return `can't contribute NHIF if salary is less than 1000`;
-                //console.log("less salary, cant deduct")
+               
                 nhifAmount += 0;
             }
 
             return nhifAmount;
         }
 
-        ///////////////////////////////////////////////////////////////////
-        //calculate income after pension deduction
+     
         const getIncomeAfterPension = () => {
             //income before pension - all deductible nssf pension contribution
             //return getTotalTaxableIncome() - 200; //getDeductibleNSSF() pension
